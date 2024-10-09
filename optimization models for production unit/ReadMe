@@ -1,0 +1,70 @@
+This notebook covers two main exercises, focusing on optimization modeling for two production sites (BIC and CIB).
+
+---
+
+## 1. Introduction and Imports
+The following Python libraries are used:
+- **Pandas** for data manipulation.
+- **NumPy** for numerical operations.
+- **Matplotlib** for plotting.
+- **Statsmodels** for statistical modeling.
+
+---
+
+## 2. Exercise 1: Operations Excellence
+This section focuses on setting up optimization models for production units at the BIC and CIB sites.
+
+### Optimization Models
+- **Decision Variables:**
+  - $x_1$: Standard Units at BIC.
+  - $x_2$: Deluxe Units at BIC.
+  - $x_3$: Standard Units at CIB.
+  - $x_4$: Deluxe Units at CIB.
+
+- **Objective Functions:**
+  - **BIC Site Objective:** Maximize profit:
+    \[
+    \text{Maximize } Z_{BIC} = 10x_1 + 15x_2
+    \]
+  - **CIB Site Objective:** Similarly, maximize profit:
+    \[
+    \text{Maximize } Z_{CIB} = 10x_3 + 15x_4
+    \]
+
+- **Constraints:**
+  - **BIC Site Constraints:**
+    \[
+    4x_1 + 2x_2 \leq 80 \quad \text{(Cooking Capacity)}
+    \]
+    \[
+    2x_1 + 5x_2 \leq 60 \quad \text{(Filtering Capacity)}
+    \]
+    \[
+    4(x_1 + x_2) \leq 75 \quad \text{(Raw Material Usage)}
+    \]
+  
+  - **CIB Site Constraints:**
+    \[
+    5x_3 + 3x_4 \leq 60 \quad \text{(Cooking Capacity)}
+    \]
+    \[
+    5x_3 + 6x_4 \leq 75 \quad \text{(Filtering Capacity)}
+    \]
+    \[
+    4(x_3 + x_4) \leq 45 \quad \text{(Raw Material Usage)}
+    \]
+
+- **Non-negativity Constraints:**
+  \[
+  x_1, x_2, x_3, x_4 \geq 0
+  \]
+
+---
+
+## 3. Exercise 2: Optimization Solutions
+The optimization models from Exercise 1 are solved to find the optimal production quantities for both sites. Using Python's optimization libraries, the model provides the values of $x_1, x_2, x_3, x_4$ that maximize profit while satisfying the constraints.
+
+---
+
+## 4. Conclusion
+The notebook demonstrates how to set up and solve optimization models for two production sites. The constraints ensure feasibility, and the objective functions aim to maximize profit for each site. Optimal production levels are calculated using the defined models, illustrating the application of optimization in decision-making.
