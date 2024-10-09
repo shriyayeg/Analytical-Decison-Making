@@ -1,0 +1,71 @@
+## Exercise 1: Optimization Models for BIC and CIB Sites
+
+### Question 1: Formulating Optimization Models
+
+#### Decision Variables
+We define four decision variables, each representing production units at the BIC and CIB sites:
+
+- $x_1$: Standard Units at BIC
+- $x_2$: Deluxe Units at BIC
+- $x_3$: Standard Units at CIB
+- $x_4$: Deluxe Units at CIB
+
+#### Objective Functions
+
+- **BIC Site Objective**: Maximize profit contribution from standard and deluxe units.
+  \[
+  \text{Maximize } Z_{BIC} = 10x_1 + 15x_2
+  \]
+
+- **CIB Site Objective**: Similarly, maximize profit for the CIB site.
+  \[
+  \text{Maximize } Z_{CIB} = 10x_3 + 15x_4
+  \]
+
+#### Constraints
+
+##### BIC Site Constraints:
+1. Cooking Capacity: 
+   \[
+   4x_1 + 2x_2 \leq 80
+   \]
+2. Filtering Capacity:
+   \[
+   2x_1 + 5x_2 \leq 60
+   \]
+3. Raw Material Usage:
+   \[
+   4(x_1 + x_2) \leq 75
+   \]
+
+##### CIB Site Constraints:
+1. Cooking Capacity:
+   \[
+   5x_3 + 3x_4 \leq 60
+   \]
+2. Filtering Capacity:
+   \[
+   5x_3 + 6x_4 \leq 75
+   \]
+3. Raw Material Usage:
+   \[
+   4(x_3 + x_4) \leq 45
+   \]
+
+##### Non-Negativity Constraints:
+Ensure the production units are feasible:
+\[
+x_1, x_2, x_3, x_4 \geq 0
+\]
+
+---
+
+### Question 2: Optimal Solutions and Profit Levels
+
+Using optimization solvers, we determine the optimal production quantities and corresponding profit levels for both the BIC and CIB sites. The solutions were computed using Python's `cvxpy` library, leveraging lecture materials for optimal configurations.
+
+---
+
+## Conclusion
+
+This project formulates and solves optimization problems for two production sites, BIC and CIB, maximizing profit while adhering to production constraints. Through linear programming, we derive optimal production levels for each site, helping to improve decision-making in operations management.
